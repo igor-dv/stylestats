@@ -21,6 +21,7 @@
   "totalUniqueColors": "Total Unique Colors",
   "uniqueColor": "Unique Color",
   "idSelectors": "ID Selectors",
+  "elementSelectors": "Element Selectors",
   "universalSelectors": "Universal Selectors",
   "unqualifiedAttributeSelectors": "Unqualified Attribute Selectors",
   "javascriptSpecificSelectors": "JavaScript Specific Selectors",
