@@ -20,13 +20,13 @@ program
   .option('-g, --gzip', 'Show gzipped file size.')
   .option('-n, --number', 'Show only numeral metrics.')
   .option('-u, --ua [OS]', 'Specify the user agent. <ios|android>')
+  .option('-f, --savefile [path]', 'Save to file. <pathToFile>')
   .parse(process.argv);
 
 if (!program.args.length) {
   console.log(chalk.red('\n No input file specified.'));
   program.help();
 }
-
 
 // Config
 var config = {
@@ -87,26 +87,38 @@ stats.parse(function (error, result) {
     console.log(chalk.red(' [ERROR] ' + error.message));
   }
 
+  var saveOrLog = function(content){
+    if(program.savefile) {
+        fs.writeFile(program.savefile, content, function(err) {
+            if(err) { console.log(err); } 
+            else { console.log("The file was saved!"); }
+        });
+      }
+      else {
+        console.log(content);
+      }
+  }
+
   var format = new Format(result, program.simple);
   switch (program.type) {
     case 'json':
       format.toJSON(function (json) {
-        console.log(json);
+        saveOrLog(json)
       });
       break;
     case 'csv':
       format.toCSV(function (csv) {
-        console.log(csv);
+        saveOrLog(csv);
       });
       break;
     case 'html':
       format.toHTML(function (html) {
-        console.log(html);
+        saveOrLog(html);
       });
       break;
     default:
       format.toTable(function (table) {
-        console.log(' StyleStats!\n' + table);
+        saveOrLog(' StyleStats!\n' + table);
       });
       break;
   }
