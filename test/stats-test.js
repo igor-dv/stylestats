@@ -38,7 +38,7 @@ describe('CSS Statistics', function() {
     assert.equal(statsResult.mostIdentifier, 5);
   });
   it('should return most identifier selector', function() {
-    assert.equal(statsResult.mostIdentifierSelector, '.foo  .bar > .baz + .qux ~ .quux:before');
+    assert.equal(statsResult.mostIdentifierSelector[0], '.foo  .bar > .baz + .qux ~ .quux:before');
   });
   it('should return lowest cohesion', function() {
     assert.equal(statsResult.lowestCohesion, 8);

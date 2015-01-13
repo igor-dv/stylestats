@@ -101,7 +101,7 @@ describe('Constructor Test', function () {
         if (error) {
           throw error;
         }
-        assert.equal(htmlResult.stylesheets, 1);
+        assert.equal(htmlResult.stylesheets, 2);
         done();
       });
     });
@@ -114,7 +114,7 @@ describe('Constructor Test', function () {
         if (error) {
           throw error;
         }
-        assert.equal(dirResult.size, 20462);
+        assert.equal(dirResult.size, 40754);
         done();
       });
     });
