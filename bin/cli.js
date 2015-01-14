@@ -106,6 +106,11 @@ stats.parse(function (error, result) {
         saveOrLog(json)
       });
       break;
+    case 'safe-json':
+      format.toSafeJSON(function (json) {
+        saveOrLog(json)
+      });
+      break;
     case 'csv':
       format.toCSV(function (csv) {
         saveOrLog(csv);
