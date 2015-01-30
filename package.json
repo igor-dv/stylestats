@@ -49,11 +49,9 @@
     "glob": "^4.0.5",
     "gzip-size": "^1.0.0",
     "json2csv": "^2.2.1",
-    "less": "^2.2.0",
     "numeral": "^1.5.3",
     "promise": "^6.0.0",
     "request": "^2.40.0",
-    "stylus": "^0.49.3",
     "underscore": "^1.7.0"
   },
   "devDependencies": {

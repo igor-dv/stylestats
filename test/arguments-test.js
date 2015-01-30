@@ -58,17 +58,6 @@ describe('Constructor Test', function () {
 
   describe('URL', function() {
 
-    it('should return file size if CSS URL is given', function(done) {
-      var requestStats = new StyleStats('http://t32k.me/mol/assets/main.css');
-      requestStats.parse(function(error, requestResult) {
-        if (error) {
-          throw error;
-        }
-        assert.equal(requestResult.size, 58694);
-        done();
-      });
-    });
-
     it('should throw error if CSS of specified URL is invalid', function(done) {
       var invalidCSS = new StyleStats('http://t32k.me/static/assets/css/invalid.css');
       assert.throws(
@@ -114,7 +103,7 @@ describe('Constructor Test', function () {
         if (error) {
           throw error;
         }
-        assert.equal(dirResult.size, 40754);
+        assert.equal(dirResult.size, 39931);
         done();
       });
     });
@@ -167,28 +156,4 @@ describe('Constructor Test', function () {
     });
   });
 
-  describe('Preprocessor files', function() {
-
-    it('should return file size if LESS files are specified', function(done) {
-      var lessStats = new StyleStats('test/fixture/prepros/foo.less');
-      lessStats.parse(function(error, lessResult) {
-        if (error) {
-          throw error;
-        }
-        assert.equal(lessResult.size, 495);
-        done();
-      });
-    });
-
-    it('should return file size if Stylus files are specified', function(done) {
-      var stylStats = new StyleStats('test/fixture/prepros/foo.styl');
-      stylStats.parse(function(error, stylResult) {
-        if (error) {
-          throw error;
-        }
-        assert.equal(stylResult.size, 259);
-        done();
-      });
-    });
-  });
 });
