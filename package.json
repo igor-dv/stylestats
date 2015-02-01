@@ -52,7 +52,8 @@
     "numeral": "^1.5.3",
     "promise": "^6.0.0",
     "request": "^2.40.0",
-    "underscore": "^1.7.0"
+    "underscore": "^1.7.0",
+    "css-selector-parser": "^1.0.3"
   },
   "devDependencies": {
     "coveralls": "^2.11.1",
