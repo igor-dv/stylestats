@@ -38,5 +38,6 @@
   "errors" : true,
   "requestOptions": {},
   "namedColors": ["white", "black"],
-  "exclude": []
+  "exclude": [],
+  "sourceMap": false
 }

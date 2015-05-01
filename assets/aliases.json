@@ -34,5 +34,6 @@
   "floatProperties": "Float Properties",
   "mediaQueries": "Media Queries",
   "propertiesCount": "Properties Count",
-  "errors" : "Errors"
+  "errors" : "Errors",
+  "sourceMap" : "Source Map"
 }
