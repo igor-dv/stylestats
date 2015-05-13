@@ -39,5 +39,6 @@
   "requestOptions": {},
   "namedColors": ["white", "black"],
   "exclude": [],
-  "sourceMap": false
+  "sourceMap": false,
+  "sourceMapFileNameReduce": false
 }
