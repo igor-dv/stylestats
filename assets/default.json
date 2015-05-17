@@ -40,5 +40,6 @@
   "namedColors": ["white", "black"],
   "exclude": [],
   "sourceMap": false,
-  "sourceMapFileNameReduce": false
+  "sourceMapFileNameReduce": false,
+  "analyzeBackground" : false
 }
